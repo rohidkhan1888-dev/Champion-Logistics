@@ -1,847 +1,740 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Champion Logistics Worldwide | Global Freight & Supply Chain Solutions</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
+    <title>Champion Logistics Worldwide | Professional Truck Dispatch Services</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            blue: '#0B2545',
-                            navy: '#13315C',
-                            accent: '#00B4D8',
-                            gold: '#FFB703',
-                            orange: '#FB8500',
-                            light: '#EEF4F8'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(11, 37, 69, 0.92) 0%, rgba(19, 49, 92, 0.85) 100%), 
-                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        :root {
+            --primary: #0a2540;
+            --secondary: #d9232d;
+            --accent: #17bf63;
+            --light-bg: #f8f9fa;
+            --dark-text: #2d3748;
+            --muted-text: #6c757d;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
         }
-        .custom-glass {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--dark-text);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Top Utility Bar */
+        .top-bar {
+            background-color: #051424;
+            color: var(--white);
+            padding: 8px 5%;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar-info span {
+            margin-right: 20px;
+        }
+
+        .top-bar-info i {
+            color: var(--secondary);
+            margin-right: 6px;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--primary);
+        }
+
+        .logo i {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text .main-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+
+        .logo-text .sub-title {
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            color: var(--secondary);
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: var(--white) !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background-color: #b81b23;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            color: var(--white);
+            padding: 100px 5% 120px 5%;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #d1d5db;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            border-radius: 6px;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        .stat-card p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+            color: #e5e7eb;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 5%;
+            background-color: var(--light-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 10px auto 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(217, 35, 45, 0.1);
+            color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--muted-text);
+        }
+
+        /* Dispatch Setup Form Section */
+        .dispatch-setup {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .setup-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .setup-text h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .setup-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .setup-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .setup-list i {
+            color: var(--accent);
+            margin-right: 12px;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .form-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-top: 4px solid var(--secondary);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+
+        /* Fleet / Equipment Section */
+        .equipment {
+            padding: 80px 5%;
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .equipment .section-header h2 {
+            color: var(--white);
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .eq-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 6px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .eq-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .eq-card h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 5%;
+            background-color: var(--light-bg);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-info-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info-card i {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        .contact-info-card h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .contact-info-card p {
+            color: var(--muted-text);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #051424;
+            color: #a0aec0;
+            padding: 60px 5% 20px 5%;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 40px auto;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #a0aec0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none; /* Can be toggled with JS in production */
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .setup-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-brand-accent selection:text-white">
+<body>
 
-    <!-- Top Bar -->
-    <div class="bg-brand-blue text-gray-300 text-xs py-2 px-4 border-b border-gray-800 hidden sm:block">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-6">
-                <span><i class="fas font-solid fa-phone text-brand-accent mr-2"></i>(786) 430-9417</span>
-                <span><i class="fas font-solid fa-location-dot text-brand-accent mr-2"></i>7901 4th St N Ste 300, St. Petersburg, FL 33702</span>
-                <span><i class="fas font-solid fa-clock text-brand-accent mr-2"></i>24/7 Operations Control</span>
-            </div>
-            <div class="flex items-center space-x-4">
-                <a href="#" class="hover:text-brand-accent transition"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="hover:text-brand-accent transition"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-brand-accent transition"><i class="fab fa-facebook"></i></a>
-                <span class="border-l border-gray-700 h-3 mx-1"></span>
-                <a href="#tracking" class="text-brand-gold font-medium hover:underline">Client Portal Login</a>
-            </div>
+    <!-- Top Utility Bar -->
+    <div class="top-bar">
+        <div class="top-bar-info">
+            <span><i class="fas fa-phone"></i> +1 (513) 775-5996</span>
+            <span><i class="fas fa-map-marker-alt"></i> Orlando, Florida</span>
+        </div>
+        <div>
+            <span><i class="fas fa-clock"></i> 24/7 Dispatch Support</span>
         </div>
     </div>
 
-    <!-- Main Navigation Header -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Brand Logo -->
-                <a href="#" class="flex items-center space-x-3 group">
-                    <div class="w-11 h-11 bg-brand-blue rounded-xl flex items-center justify-center text-brand-gold shadow-md group-hover:bg-brand-navy transition-colors">
-                        <i class="fas fa-shipping-fast text-xl"></i>
-                    </div>
-                    <div>
-                        <span class="text-2xl font-black tracking-tight text-brand-blue block leading-none">CHAMPION</span>
-                        <span class="text-xs font-bold tracking-widest text-brand-accent uppercase">Logistics Worldwide</span>
-                    </div>
-                </a>
-
-                <!-- Desktop Nav Navigation -->
-                <nav class="hidden lg:flex items-center space-x-8 font-semibold text-sm text-gray-700">
-                    <a href="#services" class="hover:text-brand-accent transition-colors">Services</a>
-                    <a href="#tracking" class="hover:text-brand-accent transition-colors">Track Shipment</a>
-                    <a href="#quote" class="hover:text-brand-accent transition-colors">Get Quote</a>
-                    <a href="#network" class="hover:text-brand-accent transition-colors">Global Network</a>
-                    <a href="#about" class="hover:text-brand-accent transition-colors">About Us</a>
-                    <a href="#contact" class="hover:text-brand-accent transition-colors">Contact</a>
-                </nav>
-
-                <!-- Header CTA Button -->
-                <div class="hidden lg:flex items-center space-x-4">
-                    <a href="#quote" class="bg-brand-gold hover:bg-yellow-500 text-brand-blue font-bold px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition transform active:scale-95 text-sm flex items-center">
-                        <i class="fas font-solid fa-calculator mr-2"></i> Request Quote
-                    </a>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <i class="fas fa-truck-moving"></i>
+                <div class="logo-text">
+                    <span class="main-title">CHAMPION</span>
+                    <span class="sub-title">Logistics Worldwide</span>
                 </div>
-
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100 focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
-            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Services</a>
-            <a href="#tracking" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Track Shipment</a>
-            <a href="#quote" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Get Quote</a>
-            <a href="#network" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Global Network</a>
-            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">About Us</a>
-            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-50">Contact</a>
-            <a href="#quote" class="block w-full text-center bg-brand-gold text-brand-blue font-bold px-4 py-3 rounded-lg shadow mt-2">
-                Request Instant Quote
             </a>
-        </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#equipment">Equipment</a></li>
+                <li><a href="#setup">Carrier Setup</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="tel:+15137755996" class="btn-primary">Call Dispatch</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative hero-gradient min-h-[620px] flex items-center pt-12 pb-20 px-4 text-white">
-        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            <!-- Hero Left Text Content -->
-            <div class="lg:col-span-7 space-y-6">
-                <div class="inline-flex items-center space-x-2 bg-brand-accent/20 border border-brand-accent/40 rounded-full px-4 py-1.5 text-brand-accent text-sm font-semibold backdrop-blur-sm">
-                    <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
-                    <span>Next-Gen Global Logistics Partner</span>
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Maximize Your Profits with Top-Tier Truck Dispatching</h1>
+            <p>We handle the paperwork, rate negotiations, and route optimization so you can focus on driving. Independent owner-operators and fleet owners welcome.</p>
+            <a href="#setup" class="btn-primary" style="padding: 15px 30px; font-size: 1rem;">Get Started Today</a>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>Dedicated Dispatch Support</p>
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-                    Powering Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-gold">Supply Chain</span> Across Continents
-                </h1>
-                <p class="text-lg text-gray-300 max-w-2xl font-normal leading-relaxed">
-                    Seamless air freight, ocean transport, expedited trucking, and contract warehousing. Engineered for speed, efficiency, and absolute reliability anywhere on Earth.
-                </p>
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a href="#quote" class="bg-brand-accent hover:bg-cyan-500 text-brand-blue font-extrabold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-cyan-500/30 transition transform hover:-translate-y-0.5">
-                        Start Shipping Now <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                    <a href="#services" class="custom-glass hover:bg-white/20 text-white font-semibold px-7 py-3.5 rounded-xl transition border border-white/20">
-                        Explore Services
-                    </a>
+                <div class="stat-card">
+                    <h3>Highest</h3>
+                    <p>Gross Market Rates</p>
                 </div>
-
-                <!-- Hero Trust Badges -->
-                <div class="pt-8 border-t border-white/10 grid grid-cols-3 gap-4 text-xs sm:text-sm font-medium text-gray-300">
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-check-circle text-brand-gold"></i>
-                        <span>Customs Clearance</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-check-circle text-brand-gold"></i>
-                        <span>190+ Countries</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <i class="fas fa-check-circle text-brand-gold"></i>
-                        <span>24/7 Live Monitoring</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hero Right Card: Live Tracking Widget Container -->
-            <div id="tracking" class="lg:col-span-5">
-                <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 text-gray-800 border border-gray-100">
-                    <div class="flex items-center space-x-3 mb-6">
-                        <div class="w-10 h-10 rounded-lg bg-brand-light flex items-center justify-center text-brand-blue">
-                            <i class="fas fa-location-crosshairs text-xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-brand-blue">Track & Trace Shipment</h3>
-                            <p class="text-xs text-gray-500">Real-time status updates & milestones</p>
-                        </div>
-                    </div>
-
-                    <!-- Tracking Input Form -->
-                    <form id="tracking-form" onsubmit="event.preventDefault(); simulateTracking();" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-600 uppercase mb-2">Tracking / Bill of Lading Number</label>
-                            <div class="relative">
-                                <input type="text" id="tracking-number" placeholder="e.g. CLW-98234-EXP" required 
-                                    class="w-full pl-4 pr-12 py-3 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-accent focus:bg-white transition text-sm font-semibold uppercase tracking-wider">
-                                <button type="submit" class="absolute right-2 top-2 bottom-2 bg-brand-blue hover:bg-brand-navy text-white px-4 rounded-lg transition flex items-center justify-center">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                            <p class="text-[11px] text-gray-400 mt-1">Try demo code: <button type="button" onclick="document.getElementById('tracking-number').value='CLW-88392-US'; simulateTracking();" class="text-brand-accent font-semibold underline">CLW-88392-US</button></p>
-                        </div>
-                    </form>
-
-                    <!-- Dynamic Tracking Result Box -->
-                    <div id="tracking-results" class="hidden mt-6 pt-6 border-t border-gray-100">
-                        <div class="flex justify-between items-start mb-4">
-                            <div>
-                                <span class="inline-block px-2.5 py-1 bg-green-100 text-green-700 rounded-md text-xs font-bold uppercase tracking-wider mb-1">
-                                    In Transit
-                                </span>
-                                <h4 class="font-bold text-gray-800 text-sm" id="res-id">CLW-88392-US</h4>
-                            </div>
-                            <div class="text-right">
-                                <span class="text-xs text-gray-500 block">Estimated Delivery</span>
-                                <span class="font-bold text-brand-blue text-sm">Tomorrow, 14:00</span>
-                            </div>
-                        </div>
-
-                        <!-- Progress Bar Visual -->
-                        <div class="space-y-2 my-4">
-                            <div class="w-full bg-gray-200 rounded-full h-2">
-                                <div class="bg-brand-accent h-2 rounded-full transition-all duration-1000" style="width: 70%"></div>
-                            </div>
-                            <div class="flex justify-between text-[11px] font-medium text-gray-500">
-                                <span>Origin: Shanghai (PVG)</span>
-                                <span>Destination: Chicago (ORD)</span>
-                            </div>
-                        </div>
-
-                        <!-- Mini Milestones -->
-                        <div class="space-y-3 pt-2">
-                            <div class="flex items-start space-x-3 text-xs">
-                                <div class="w-2 h-2 rounded-full bg-brand-accent mt-1.5 ring-4 ring-cyan-100"></div>
-                                <div>
-                                    <p class="font-semibold text-gray-800">Arrived at Regional Distribution Hub</p>
-                                    <p class="text-gray-400 text-[11px]">Chicago, IL — Today 06:45 AM</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-3 text-xs">
-                                <div class="w-2 h-2 rounded-full bg-gray-300 mt-1.5"></div>
-                                <div class="opacity-70">
-                                    <p class="font-semibold text-gray-800">Customs Cleared & Handed to Dispatch</p>
-                                    <p class="text-gray-400 text-[11px]">Port of Long Beach — Yesterday 18:20 PM</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Statistics Counter Bar -->
-    <section class="bg-brand-blue text-white py-12 border-t border-brand-navy">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div class="space-y-2">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold">25+</div>
-                    <div class="text-xs sm:text-sm font-medium text-gray-300 uppercase tracking-wider">Years Experience</div>
-                </div>
-                <div class="space-y-2">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-accent">190+</div>
-                    <div class="text-xs sm:text-sm font-medium text-gray-300 uppercase tracking-wider">Countries Served</div>
-                </div>
-                <div class="space-y-2">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-gold">1.5M+</div>
-                    <div class="text-xs sm:text-sm font-medium text-gray-300 uppercase tracking-wider">Shipments Delivered</div>
-                </div>
-                <div class="space-y-2">
-                    <div class="text-3xl sm:text-4xl font-extrabold text-brand-accent">99.4%</div>
-                    <div class="text-xs sm:text-sm font-medium text-gray-300 uppercase tracking-wider">On-Time Reliability</div>
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>Freedom of Load Choice</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Logistics Services Grid -->
-    <section id="services" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-brand-accent mb-3">World-Class Solutions</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold text-brand-blue">Comprehensive Logistics Capabilities</h3>
-                <p class="mt-4 text-gray-600">From critical air charters to complex multi-modal supply chains, Champion Logistics delivers custom logistics solutions tailored to your industry.</p>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Our Dispatch Services</h2>
+            <p>End-to-end logistics solutions engineered to keep your wheels turning profitability.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Rate Negotiation</h3>
+                <p>We negotiate aggressively with top brokers to secure the highest pay per mile for your specific routes.</p>
             </div>
 
-            <!-- Services Cards Container -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h3>Invoicing & Setup</h3>
+                <p>Full-service back-office management including carrier setups, broker packets, rate confirmations, and billing.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-route"></i></div>
+                <h3>Route Optimization</h3>
+                <p>Strategic lane planning to minimize deadhead miles and keep your trucks operating efficiently week after week.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-headset"></i></div>
+                <h3>24/7 Driver Support</h3>
+                <p>Round-the-clock assistance for check calls, detention management, layover claims, and emergency support.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Types Section -->
+    <section class="equipment" id="equipment">
+        <div class="section-header">
+            <h2>Equipment Types We Dispatch</h2>
+            <p>Our experienced team finds optimal loads across all major equipment types.</p>
+        </div>
+
+        <div class="equipment-grid">
+            <div class="eq-card">
+                <i class="fas fa-box"></i>
+                <h4>Dry Vans</h4>
+                <p>High-demand general freight nationwide.</p>
+            </div>
+            <div class="eq-card">
+                <i class="fas fa-snowflake"></i>
+                <h4>Reefers</h4>
+                <p>Temperature-controlled produce and food items.</p>
+            </div>
+            <div class="eq-card">
+                <i class="fas fa-truck-flatbed"></i>
+                <h4>Flatbeds & Stepdecks</h4>
+                <p>Over-sized, machinery, and construction cargo.</p>
+            </div>
+            <div class="eq-card">
+                <i class="fas fa-truck-pickup"></i>
+                <h4>Power Only / Hotshots</h4>
+                <p>Flexible trailer transport and quick regional runs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrier Onboarding Form Section -->
+    <section class="dispatch-setup" id="setup">
+        <div class="setup-container">
+            <div class="setup-text">
+                <h2>Ready to Drive with Champion Logistics?</h2>
+                <p>Partner with a dispatch team that works exclusively for your success. No forced dispatch, full operational freedom, and dedicated account managers.</p>
                 
-                <!-- Service 1: Air Freight -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-14 h-14 rounded-xl bg-cyan-50 text-brand-accent flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-accent group-hover:text-white transition-colors duration-300">
-                            <i class="fas font-solid fa-plane-departure"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Air Freight Solutions</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            Expedited international air freight, direct charters, and deferred options for time-sensitive cargo with priority customs clearance.
-                        </p>
-                    </div>
-                    <a href="#quote" class="text-brand-blue font-bold text-sm inline-flex items-center group-hover:text-brand-accent transition">
-                        Learn More <i class="fas fa-chevron-right text-xs ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-
-                <!-- Service 2: Ocean Freight -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-14 h-14 rounded-xl bg-blue-50 text-brand-blue flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
-                            <i class="fas font-solid fa-ship"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Ocean Freight Forwarding</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            Full Container Load (FCL) and Less Container Load (LCL) consolidation services linking all key global maritime trade routes.
-                        </p>
-                    </div>
-                    <a href="#quote" class="text-brand-blue font-bold text-sm inline-flex items-center group-hover:text-brand-accent transition">
-                        Learn More <i class="fas fa-chevron-right text-xs ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-
-                <!-- Service 3: Ground Trucking -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-14 h-14 rounded-xl bg-amber-50 text-brand-gold flex items-center justify-center text-2xl mb-6 group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
-                            <i class="fas font-solid fa-truck-fast"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Ground & Expedited Trucking</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            FTL, LTL, and specialized cross-border trucking with temperature control, oversized load handling, and real-time GPS tracking.
-                        </p>
-                    </div>
-                    <a href="#quote" class="text-brand-blue font-bold text-sm inline-flex items-center group-hover:text-brand-accent transition">
-                        Learn More <i class="fas fa-chevron-right text-xs ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-
-                <!-- Service 4: Warehousing -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
-                            <i class="fas font-solid fa-warehouse"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Contract Warehousing</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            Secure, climate-controlled warehousing facilities with advanced inventory management, pick-and-pack, and fulfillment support.
-                        </p>
-                    </div>
-                    <a href="#quote" class="text-brand-blue font-bold text-sm inline-flex items-center group-hover:text-brand-accent transition">
-                        Learn More <i class="fas fa-chevron-right text-xs ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-
-                <!-- Service 5: Customs Clearance -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-14 h-14 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-purple-600 group-hover:text-white transition-colors duration-300">
-                            <i class="fas font-solid fa-passport"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Customs & Compliance</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            Licensed customs brokerage experts ensuring seamless tariff classification, documentation, duty management, and compliance.
-                        </p>
-                    </div>
-                    <a href="#quote" class="text-brand-blue font-bold text-sm inline-flex items-center group-hover:text-brand-accent transition">
-                        Learn More <i class="fas fa-chevron-right text-xs ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-
-                <!-- Service 6: Specialized Logistics -->
-                <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group">
-                    <div>
-                        <div class="w-14 h-14 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-2xl mb-6 group-hover:bg-rose-600 group-hover:text-white transition-colors duration-300">
-                            <i class="fas font-solid fa-boxes-packing"></i>
-                        </div>
-                        <h4 class="text-xl font-bold text-gray-900 mb-3">Project Cargo & High-Value</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-                            Heavy-lift logistics, high-value secure transit, and white-glove event/tradeshow logistics with dedicated management teams.
-                        </p>
-                    </div>
-                    <a href="#quote" class="text-brand-blue font-bold text-sm inline-flex items-center group-hover:text-brand-accent transition">
-                        Learn More <i class="fas fa-chevron-right text-xs ml-2 group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-
+                <ul class="setup-list">
+                    <li><i class="fas fa-check-circle"></i> Complete control over where and when you drive</li>
+                    <li><i class="fas fa-check-circle"></i> Quick and hassle-free carrier setup</li>
+                    <li><i class="fas fa-check-circle"></i> Dedicated dispatcher assigned to your truck</li>
+                    <li><i class="fas fa-check-circle"></i> Direct payment from brokers to your account</li>
+                </ul>
             </div>
-        </div>
-    </section>
 
-    <!-- Interactive Quote Calculator Section -->
-    <section id="quote" class="py-20 bg-brand-light">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100">
-                <div class="bg-brand-blue text-white p-8 sm:p-10 text-center relative overflow-hidden">
-                    <div class="relative z-10">
-                        <span class="text-brand-accent font-bold text-xs uppercase tracking-widest block mb-2">Instant Estimation</span>
-                        <h3 class="text-2xl sm:text-3xl font-extrabold">Request a Freight Quote</h3>
-                        <p class="text-gray-300 text-sm max-w-xl mx-auto mt-2">Get an immediate ballpark estimate or submit details for a customized corporate shipping rate.</p>
+            <div class="form-box">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">Carrier Sign-Up</h3>
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Thank you! A dispatch manager will contact you shortly.');">
+                    <div class="form-group">
+                        <label for="company">Company / Fleet Name</label>
+                        <input type="text" id="company" required placeholder="Your Business Name">
                     </div>
-                </div>
-
-                <!-- Interactive Quote Form -->
-                <form id="quote-form" onsubmit="event.preventDefault(); calculateEstimate();" class="p-6 sm:p-10 space-y-8">
-                    
-                    <!-- Transport Mode Selector -->
-                    <div>
-                        <label class="block text-xs font-bold text-gray-700 uppercase mb-3">Select Mode of Transport</label>
-                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                            <label class="border-2 border-gray-200 rounded-xl p-3 text-center cursor-pointer hover:border-brand-accent transition flex flex-col items-center justify-center space-y-2 has-[:checked]:border-brand-accent has-[:checked]:bg-cyan-50/50">
-                                <input type="radio" name="mode" value="air" class="sr-only" checked>
-                                <i class="fas fa-plane text-2xl text-brand-blue"></i>
-                                <span class="text-xs font-bold text-gray-800">Air Freight</span>
-                            </label>
-                            <label class="border-2 border-gray-200 rounded-xl p-3 text-center cursor-pointer hover:border-brand-accent transition flex flex-col items-center justify-center space-y-2 has-[:checked]:border-brand-accent has-[:checked]:bg-cyan-50/50">
-                                <input type="radio" name="mode" value="ocean" class="sr-only">
-                                <i class="fas fa-ship text-2xl text-brand-blue"></i>
-                                <span class="text-xs font-bold text-gray-800">Ocean (FCL/LCL)</span>
-                            </label>
-                            <label class="border-2 border-gray-200 rounded-xl p-3 text-center cursor-pointer hover:border-brand-accent transition flex flex-col items-center justify-center space-y-2 has-[:checked]:border-brand-accent has-[:checked]:bg-cyan-50/50">
-                                <input type="radio" name="mode" value="road" class="sr-only">
-                                <i class="fas fa-truck text-2xl text-brand-blue"></i>
-                                <span class="text-xs font-bold text-gray-800">Ground Trucking</span>
-                            </label>
-                            <label class="border-2 border-gray-200 rounded-xl p-3 text-center cursor-pointer hover:border-brand-accent transition flex flex-col items-center justify-center space-y-2 has-[:checked]:border-brand-accent has-[:checked]:bg-cyan-50/50">
-                                <input type="radio" name="mode" value="warehouse" class="sr-only">
-                                <i class="fas fa-warehouse text-2xl text-brand-blue"></i>
-                                <span class="text-xs font-bold text-gray-800">Warehousing</span>
-                            </label>
-                        </div>
+                    <div class="form-group">
+                        <label for="mc">MC / DOT Number</label>
+                        <input type="text" id="mc" required placeholder="MC# or DOT#">
                     </div>
-
-                    <!-- Origin & Destination -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Origin City / Port</label>
-                            <input type="text" placeholder="e.g. Shanghai, China" required 
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-brand-accent focus:bg-white outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Destination City / Port</label>
-                            <input type="text" placeholder="e.g. Los Angeles, USA" required 
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-brand-accent focus:bg-white outline-none">
-                        </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" required placeholder="(513) 000-0000">
                     </div>
-
-                    <!-- Cargo Details -->
-                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Total Weight (Kg)</label>
-                            <input type="number" id="weight-input" placeholder="e.g. 500" required min="1"
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-brand-accent focus:bg-white outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Volume (CBM)</label>
-                            <input type="number" id="cbm-input" placeholder="e.g. 2.5" step="0.1" required
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-brand-accent focus:bg-white outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-700 uppercase mb-2">Email Address</label>
-                            <input type="email" placeholder="john@company.com" required 
-                                class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-xl text-sm focus:ring-2 focus:ring-brand-accent focus:bg-white outline-none">
-                        </div>
+                    <div class="form-group">
+                        <label for="equipment-type">Equipment Type</label>
+                        <select id="equipment-type" required>
+                            <option value="">Select Equipment</option>
+                            <option value="dryvan">Dry Van</option>
+                            <option value="reefer">Reefer</option>
+                            <option value="flatbed">Flatbed / Stepdeck</option>
+                            <option value="hotshot">Hotshot</option>
+                            <option value="poweronly">Power Only</option>
+                        </select>
                     </div>
-
-                    <!-- Action Button -->
-                    <div class="text-center pt-2">
-                        <button type="submit" class="w-full sm:w-auto bg-brand-gold hover:bg-yellow-500 text-brand-blue font-extrabold px-10 py-4 rounded-xl shadow-lg transition transform hover:scale-[1.01] active:scale-95 text-base">
-                            Calculate Estimated Rate <i class="fas fa-calculator ml-2"></i>
-                        </button>
-                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">Submit Information</button>
                 </form>
+            </div>
+        </div>
+    </section>
 
-                <!-- Calculation Output Box -->
-                <div id="quote-result" class="hidden bg-emerald-50 border-t border-emerald-200 p-6 sm:p-8 text-center">
-                    <div class="inline-flex items-center justify-center w-12 h-12 bg-emerald-100 text-emerald-600 rounded-full mb-3">
-                        <i class="fas fa-check text-xl"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-gray-800">Instant Estimate Ready</h4>
-                    <div class="text-3xl font-extrabold text-brand-blue my-2" id="estimated-cost">$1,240.00 - $1,480.00 USD</div>
-                    <p class="text-xs text-gray-600 max-w-md mx-auto">
-                        An official proposal and breakdown with customized schedules has been dispatched to your email address.
-                    </p>
+    <!-- Contact Info Section -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Our dispatch team is ready to answer your questions and start booking loads.</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Corporate Address</h4>
+                    <p>2108 SUNSET TERRACE DR<br>ORLANDO, Florida, 32825, United States</p>
+                </div>
+            </div>
+
+            <div class="contact-info-card">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h4>Phone & Dispatch Line</h4>
+                    <p><a href="tel:+15137755996" style="color: inherit; text-decoration: none;">+1 (513) 775-5996</a></p>
+                    <p style="font-size: 0.85rem; margin-top: 5px;">Available 24/7 for active loads</p>
+                </div>
+            </div>
+
+            <div class="contact-info-card">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h4>Hours of Operation</h4>
+                    <p>Dispatch Desk: 24/7 / 365</p>
+                    <p>Office Hours: Mon - Fri: 8 AM - 6 PM EST</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Global Network Hubs -->
-    <section id="network" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Left Text Content -->
-                <div class="lg:col-span-5 space-y-6">
-                    <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Global Presence</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-blue leading-tight">Strategic Hubs Across Key Global Trade Corridors</h2>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Champion Logistics Worldwide operates strategic gateways across North America, Europe, Asia Pacific, and the Middle East, ensuring rapid transit times and seamless customs clearance.
-                    </p>
-                    <div class="space-y-4 pt-2">
-                        <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 rounded-lg bg-brand-light flex items-center justify-center text-brand-blue flex-shrink-0">
-                                <i class="fas fa-globe-americas text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 text-sm">North American Headquarters</h4>
-                                <p class="text-xs text-gray-500">St. Petersburg, FL (US Hub) &amp; Regional Gateways</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 rounded-lg bg-brand-light flex items-center justify-center text-brand-blue flex-shrink-0">
-                                <i class="fas fa-globe-europe text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 text-sm">European Distribution</h4>
-                                <p class="text-xs text-gray-500">Key operations in Frankfurt, Rotterdam, and London Heathrow.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start space-x-4">
-                            <div class="w-10 h-10 rounded-lg bg-brand-light flex items-center justify-center text-brand-blue flex-shrink-0">
-                                <i class="fas fa-globe-asia text-lg"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-gray-800 text-sm">Asia-Pacific Logistics</h4>
-                                <p class="text-xs text-gray-500">Deep roots in Shanghai, Singapore, Tokyo, and Hong Kong.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Visual Representative Map Box -->
-                <div class="lg:col-span-7">
-                    <div class="relative bg-brand-blue rounded-3xl p-8 overflow-hidden shadow-2xl text-white">
-                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#00B4D8_1px,transparent_1px)] [background-size:16px_16px]"></div>
-                        <div class="relative z-10 space-y-6">
-                            <div class="flex justify-between items-center border-b border-brand-navy pb-4">
-                                <h3 class="font-bold text-lg text-brand-gold"><i class="fas fa-network-wired mr-2"></i> Active Logistics Nodes</h3>
-                                <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full font-semibold border border-green-500/30">Network Live</span>
-                            </div>
-
-                            <!-- Hub Cards Visual Grid -->
-                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                                <div class="bg-brand-navy/60 p-4 rounded-xl border border-brand-accent/40 shadow-inner">
-                                    <div class="text-xs text-brand-gold font-bold uppercase">USA / HEADQUARTERS</div>
-                                    <div class="text-sm font-extrabold mt-1">St. Petersburg, FL</div>
-                                    <div class="text-[11px] text-gray-300 mt-2"><i class="fas fa-building text-brand-accent mr-1"></i> Executive HQ</div>
-                                </div>
-                                <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5">
-                                    <div class="text-xs text-brand-accent font-bold">CHINA / HUB</div>
-                                    <div class="text-sm font-extrabold mt-1">Shanghai (PVG)</div>
-                                    <div class="text-[11px] text-gray-400 mt-2"><i class="fas fa-check text-green-400 mr-1"></i> Full Hub Capacity</div>
-                                </div>
-                                <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5">
-                                    <div class="text-xs text-brand-accent font-bold">GERMANY / HUB</div>
-                                    <div class="text-sm font-extrabold mt-1">Frankfurt (FRA)</div>
-                                    <div class="text-[11px] text-gray-400 mt-2"><i class="fas fa-check text-green-400 mr-1"></i> Full Hub Capacity</div>
-                                </div>
-                                <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5">
-                                    <div class="text-xs text-brand-accent font-bold">UAE / HUB</div>
-                                    <div class="text-sm font-extrabold mt-1">Dubai (DXB)</div>
-                                    <div class="text-[11px] text-gray-400 mt-2"><i class="fas fa-check text-green-400 mr-1"></i> Full Hub Capacity</div>
-                                </div>
-                                <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5">
-                                    <div class="text-xs text-brand-accent font-bold">SINGAPORE</div>
-                                    <div class="text-sm font-extrabold mt-1">Changi (SIN)</div>
-                                    <div class="text-[11px] text-gray-400 mt-2"><i class="fas fa-check text-green-400 mr-1"></i> Full Hub Capacity</div>
-                                </div>
-                                <div class="bg-brand-navy/60 p-4 rounded-xl border border-white/5">
-                                    <div class="text-xs text-brand-accent font-bold">UK / HUB</div>
-                                    <div class="text-sm font-extrabold mt-1">London (LHR)</div>
-                                    <div class="text-[11px] text-gray-400 mt-2"><i class="fas fa-check text-green-400 mr-1"></i> Full Hub Capacity</div>
-                                </div>
-                            </div>
-
-                            <p class="text-xs text-gray-400 text-center pt-2">Plus over 450 regional logistics partners supporting last-mile execution worldwide.</p>
-                        </div>
-                    </div>
-                </div>
-
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4 style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fas fa-truck-moving" style="color: var(--secondary);"></i> Champion Logistics
+                </h4>
+                <p style="font-size: 0.9rem;">Providing premier truck dispatching solutions across North America. Supporting drivers and fleets with top freight rates.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#equipment">Equipment</a></li>
+                    <li><a href="#setup">Carrier Onboarding</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Dispatch Contact</h4>
+                <ul>
+                    <li><i class="fas fa-phone" style="margin-right: 8px;"></i> +1 (513) 775-5996</li>
+                    <li><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Orlando, FL 32825</li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-gray-50 border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Client Feedback</span>
-                <h2 class="text-3xl font-extrabold text-brand-blue mt-2">Trusted by Industry Leaders</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex text-brand-gold text-sm">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-gray-600 text-sm italic">"Champion Logistics managed our peak season air freight without a single delay. Their communication and proactive tracking are second to none."</p>
-                    </div>
-                    <div class="pt-6 mt-6 border-t border-gray-100">
-                        <p class="font-bold text-gray-900 text-sm">Marcus Vance</p>
-                        <p class="text-xs text-gray-500">VP Supply Chain, TechGlobal Inc.</p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex text-brand-gold text-sm">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-gray-600 text-sm italic">"Our ocean freight costs dropped 18% after consolidating with Champion. Their customs brokerage team in Chicago eliminated cleared our shipments seamlessly."</p>
-                    </div>
-                    <div class="pt-6 mt-6 border-t border-gray-100">
-                        <p class="font-bold text-gray-900 text-sm">Elena Rostova</p>
-                        <p class="text-xs text-gray-500">Director of Operations, Apex Manufacturing</p>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
-                    <div class="space-y-4">
-                        <div class="flex text-brand-gold text-sm">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="text-gray-600 text-sm italic">"When we required white-glove specialized handling for sensitive equipment, Champion delivered flawlessly. Highly recommended!"</p>
-                    </div>
-                    <div class="pt-6 mt-6 border-t border-gray-100">
-                        <p class="font-bold text-gray-900 text-sm">David Chen</p>
-                        <p class="text-xs text-gray-500">Logistics Lead, BioHealth Dynamics</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Direct Support Section -->
-    <section id="contact" class="py-20 bg-brand-blue text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="space-y-6">
-                    <span class="text-xs font-bold uppercase tracking-widest text-brand-accent">Get In Touch</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold">Need Custom Supply Chain Engineering?</h2>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        Our freight logistics specialists are on standby 24/7 to assist with emergency charters, corporate account setup, and supply chain audits.
-                    </p>
-                    
-                    <div class="space-y-4 pt-4">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-xl bg-brand-navy flex items-center justify-center text-brand-gold">
-                                <i class="fas fa-phone-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-gray-400 uppercase font-bold block">Direct Office Phone</span>
-                                <a href="tel:7864309417" class="text-lg font-bold text-white hover:text-brand-accent transition">(786) 430-9417</a>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 rounded-xl bg-brand-navy flex items-center justify-center text-brand-accent">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-gray-400 uppercase font-bold block">Email Inquiries</span>
-                                <span class="text-lg font-bold">contact@championlogistics.com</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 rounded-xl bg-brand-navy flex items-center justify-center text-green-400 flex-shrink-0 mt-1">
-                                <i class="fas fa-map-marker-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <span class="text-xs text-gray-400 uppercase font-bold block">Corporate Office Address</span>
-                                <span class="text-sm font-semibold block text-white leading-snug">
-                                    7901 4TH ST N<br>STE 300<br>ST. PETERSBURG, FL 33702
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Interactive Google Map Embed -->
-                    <div class="mt-6 rounded-2xl overflow-hidden border border-brand-navy shadow-lg">
-                        <iframe 
-                            title="Champion Logistics Worldwide Office Location"
-                            class="w-full h-56 border-0"
-                            loading="lazy"
-                            allowfullscreen
-                            src="https://maps.google.com/maps?q=7901%204TH%20ST%20N%20STE%20300,%20ST.%20PETERSBURG,%20FL%2033702&t=&z=15&ie=UTF8&iwloc=&output=embed">
-                        </iframe>
-                    </div>
-                </div>
-
-                <!-- Contact Form Box -->
-                <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-xl">
-                    <h3 class="text-xl font-bold text-brand-blue mb-6">Send Direct Message</h3>
-                    <form onsubmit="event.preventDefault(); alert('Message sent successfully! Our team will reach out shortly.');" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Full Name</label>
-                            <input type="text" required placeholder="Jane Doe" class="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-accent outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Company Name</label>
-                            <input type="text" placeholder="Acme Logistics LLC" class="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-accent outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Message / Requirements</label>
-                            <textarea rows="4" required placeholder="How can Champion Logistics assist your business?" class="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-accent outline-none"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-navy text-white font-bold py-3 rounded-lg shadow transition">
-                            Submit Inquiry
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Footer Section -->
-    <footer class="bg-gray-950 text-gray-400 text-xs py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <!-- Col 1: Brand -->
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-2 text-white">
-                        <i class="fas fa-shipping-fast text-brand-gold text-2xl"></i>
-                        <span class="text-lg font-black tracking-tight">CHAMPION LOGISTICS</span>
-                    </div>
-                    <p class="leading-relaxed">
-                        Global Freight Forwarding, Customs Brokerage, and Supply Chain Management Engineered for Absolute Reliability.
-                    </p>
-                    <div class="text-gray-300 space-y-1 pt-1">
-                        <p class="font-semibold text-white"><i class="fas fa-map-marker-alt text-brand-accent mr-2"></i>7901 4TH ST N STE 300, ST. PETERSBURG, FL 33702</p>
-                        <p><i class="fas fa-phone text-brand-accent mr-2"></i>(786) 430-9417</p>
-                    </div>
-                </div>
-
-                <!-- Contact Form Box -->
-                <div class="bg-white text-gray-800 rounded-2xl p-8 shadow-xl">
-                    <h3 class="text-xl font-bold text-brand-blue mb-6">Send Direct Message</h3>
-                    <form onsubmit="event.preventDefault(); alert('Message sent successfully! Our representative will contact you shortly.');" class="space-y-4">
-                        <div>
-                            <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Full Name</label>
-                            <input type="text" required placeholder="Jane Doe" class="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-accent outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Company Name</label>
-                            <input type="text" placeholder="Acme Logistics LLC" class="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-accent outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Message / Requirements</label>
-                            <textarea rows="4" required placeholder="How can Champion Logistics assist your business?" class="w-full px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-accent outline-none"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-brand-blue hover:bg-brand-navy text-white font-bold py-3 rounded-lg shadow transition">
-                            Submit Inquiry
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Main Footer Section -->
-    <footer class="bg-gray-950 text-gray-400 text-xs py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <!-- Col 1: Brand -->
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-2 text-white">
-                        <i class="fas fa-shipping-fast text-brand-gold text-2xl"></i>
-                        <span class="text-lg font-black tracking-tight">CHAMPION LOGISTICS</span>
-                    </div>
-                    <p class="leading-relaxed">
-                        Global Freight Forwarding, Customs Brokerage, and Supply Chain Management Engineered for Absolute Reliability.
-                    </p>
-                </div>
-
-                <!-- Col 2: Solutions -->
-                <div class="space-y-3">
-                    <h5 class="text-white font-bold uppercase tracking-wider text-sm">Services</h5>
-                    <ul class="space-y-2">
-                        <li><a href="#services" class="hover:text-white transition">Air Freight Forwarding</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Ocean Container Shipping</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Ground & Overland Trucking</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Warehousing & Fulfillment</a></li>
-                        <li><a href="#services" class="hover:text-white transition">Customs Brokerage</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 3: Quick Links -->
-                <div class="space-y-3">
-                    <h5 class="text-white font-bold uppercase tracking-wider text-sm">Company</h5>
-                    <ul class="space-y-2">
-                        <li><a href="#about" class="hover:text-white transition">About Champion Logistics</a></li>
-                        <li><a href="#network" class="hover:text-white transition">Global Network Map</a></li>
-                        <li><a href="#tracking" class="hover:text-white transition">Track & Trace Portal</a></li>
-                        <li><a href="#quote" class="hover:text-white transition">Rate Estimator</a></li>
-                        <li><a href="#contact" class="hover:text-white transition">Contact Us</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 4: Certifications / Badges -->
-                <div class="space-y-3">
-                    <h5 class="text-white font-bold uppercase tracking-wider text-sm">Compliance & Badges</h5>
-                    <p class="leading-relaxed">Licensed FMC NVOCC, IATA Certified Agent, C-TPAT Certified Logistics Partner.</p>
-                    <div class="flex space-x-3 text-lg pt-2 text-brand-gold">
-                        <i class="fas font-solid fa-shield-halved" title="C-TPAT Certified"></i>
-                        <i class="fas font-solid fa-certificate" title="ISO 9001"></i>
-                        <i class="fas font-solid fa-plane-lock" title="IATA Accredited"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer Bottom Bar -->
-            <div class="pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center text-gray-500">
-                <p>&copy; 2026 Champion Logistics Worldwide. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 sm:mt-0">
-                    <a href="#" class="hover:text-gray-300">Privacy Policy</a>
-                    <a href="#" class="hover:text-gray-300">Terms of Transportation</a>
-                    <a href="#" class="hover:text-gray-300">Cookie Settings</a>
-                </div>
-            </div>
+        <div class="copyright">
+            <p>&copy; 2026 Champion Logistics Worldwide. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Interactive Logic Script -->
-    <script>
-        // Mobile Navigation Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Simulate Track & Trace Result Function
-        function simulateTracking() {
-            const trackNum = document.getElementById('tracking-number').value.trim();
-            const resultsBox = document.getElementById('tracking-results');
-            const resId = document.getElementById('res-id');
-
-            if (trackNum) {
-                resId.innerText = trackNum.toUpperCase();
-                resultsBox.classList.remove('hidden');
-            }
-        }
-
-        // Simulate Quote Calculation
-        function calculateEstimate() {
-            const weight = parseFloat(document.getElementById('weight-input').value) || 100;
-            const cbm = parseFloat(document.getElementById('cbm-input').value) || 1;
-            
-            // Basic demo calculation logic
-            const baseCost = Math.round((weight * 2.8) + (cbm * 150) + 250);
-            const highCost = Math.round(baseCost * 1.25);
-
-            document.getElementById('estimated-cost').innerText = `$${baseCost.toLocaleString()} - $${highCost.toLocaleString()} USD`;
-            document.getElementById('quote-result').classList.remove('hidden');
-        }
-    </script>
 </body>
 </html>
