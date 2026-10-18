@@ -7,7 +7,7 @@
     <meta name="description" content="Champion Logistics Worldwide provides premier truck dispatching services. Dedicated dispatchers, rate negotiation, paperwork, and 24/7 carrier support.">
 
     <!-- Truck Favicon (SVG Data URI) -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2'/%3E%3Cpath d='M15 18H9'/%3E%3Cpath d='M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14'/%3E%3Ccircle cx='7' cy='18' r='2'/%3E%3Ccircle cx='17' cy='18' r='2'/%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2338bdf8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2'/%3E%3Cpath d='M15 18H9'/%3E%3Cpath d='M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14'/%3E%3Ccircle cx='7' cy='18' r='2'/%3E%3Ccircle cx='17' cy='18' r='2'/%3E%3C/svg%3E">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,11 +17,11 @@
                 extend: {
                     colors: {
                         brand: {
-                            amber: '#f59e0b',
-                            amberDark: '#d97706',
-                            dark: '#0a0f1d',
-                            card: '#111827',
-                            cardBorder: '#1f2937'
+                            cyan: '#38bdf8',       /* Vibrant Sky Blue Accent */
+                            cyanDark: '#0284c7',   /* Deep Cyan Hover */
+                            dark: '#030712',       /* Ultra Deep Midnight Slate */
+                            card: '#0f172a',       /* Rich Navy Slate Card */
+                            cardBorder: '#1e293b'  /* Slate Border */
                         }
                     },
                     fontFamily: {
@@ -56,15 +56,15 @@
             scroll-behavior: smooth;
             scroll-padding-top: 5rem;
         }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0a0f1d; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #030712; }
         h1, h2, h3, .font-heading { font-family: 'Oswald', sans-serif; }
         
         .hero-overlay {
-            background: linear-gradient(180deg, rgba(10, 15, 29, 0.75) 0%, rgba(10, 15, 29, 0.95) 80%, rgba(10, 15, 29, 1) 100%);
+            background: linear-gradient(180deg, rgba(3, 7, 18, 0.75) 0%, rgba(3, 7, 18, 0.95) 80%, rgba(3, 7, 18, 1) 100%);
         }
 
         .glass-panel {
-            background: rgba(17, 24, 39, 0.75);
+            background: rgba(15, 23, 42, 0.75);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
@@ -80,7 +80,7 @@
         }
     </style>
 </head>
-<body class="bg-brand-dark text-slate-100 antialiased selection:bg-brand-amber selection:text-black">
+<body class="bg-brand-dark text-slate-100 antialiased selection:bg-brand-cyan selection:text-black">
 
     <!-- Navigation Header -->
     <nav class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-slate-800/80">
@@ -88,25 +88,25 @@
             <div class="flex items-center justify-between h-20">
                 <!-- Site Logo -->
                 <a href="#" onclick="window.location.reload(); return false;" class="flex items-center gap-3 group cursor-pointer" title="Champion Logistics Worldwide">
-                    <div class="bg-gradient-to-br from-brand-amber to-amber-600 text-brand-dark p-2 rounded-lg group-hover:scale-105 transition-transform shadow-lg shadow-brand-amber/20">
+                    <div class="bg-gradient-to-br from-brand-cyan to-blue-600 text-brand-dark p-2 rounded-lg group-hover:scale-105 transition-transform shadow-lg shadow-brand-cyan/20">
                         <i data-lucide="truck" class="w-7 h-7 text-brand-dark"></i>
                     </div>
                     <div class="flex flex-col">
                         <span class="font-heading text-xl sm:text-2xl font-bold tracking-wider text-white">CHAMPION</span>
-                        <span class="text-[10px] tracking-widest text-brand-amber font-semibold uppercase -mt-1">Logistics Worldwide</span>
+                        <span class="text-[10px] tracking-widest text-brand-cyan font-semibold uppercase -mt-1">Logistics Worldwide</span>
                     </div>
                 </a>
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                    <a href="#about" class="text-slate-300 hover:text-brand-amber transition-colors cursor-pointer">About Us</a>
-                    <a href="#services" class="text-slate-300 hover:text-brand-amber transition-colors cursor-pointer">Services</a>
-                    <a href="#fleet" class="text-slate-300 hover:text-brand-amber transition-colors cursor-pointer">Equipment</a>
-                    <a href="#why-us" class="text-slate-300 hover:text-brand-amber transition-colors cursor-pointer">Why Us</a>
-                    <a href="#terms" class="text-slate-300 hover:text-brand-amber transition-colors cursor-pointer">Terms</a>
-                    <a href="#privacy" class="text-slate-300 hover:text-brand-amber transition-colors cursor-pointer">Privacy</a>
-                    <a href="#contact" class="text-slate-300 hover:text-brand-amber transition-colors cursor-pointer">Contact</a>
-                    <a href="tel:15137755996" class="bg-brand-amber hover:bg-brand-amberDark text-brand-dark px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 transition-all shadow-lg shadow-brand-amber/20 hover:scale-105">
+                    <a href="#about" class="text-slate-300 hover:text-brand-cyan transition-colors cursor-pointer">About Us</a>
+                    <a href="#services" class="text-slate-300 hover:text-brand-cyan transition-colors cursor-pointer">Services</a>
+                    <a href="#fleet" class="text-slate-300 hover:text-brand-cyan transition-colors cursor-pointer">Equipment</a>
+                    <a href="#why-us" class="text-slate-300 hover:text-brand-cyan transition-colors cursor-pointer">Why Us</a>
+                    <a href="#terms" class="text-slate-300 hover:text-brand-cyan transition-colors cursor-pointer">Terms</a>
+                    <a href="#privacy" class="text-slate-300 hover:text-brand-cyan transition-colors cursor-pointer">Privacy</a>
+                    <a href="#contact" class="text-slate-300 hover:text-brand-cyan transition-colors cursor-pointer">Contact</a>
+                    <a href="tel:15137755996" class="bg-brand-cyan hover:bg-brand-cyanDark text-brand-dark px-5 py-2.5 rounded-lg font-bold flex items-center gap-2 transition-all shadow-lg shadow-brand-cyan/20 hover:scale-105">
                         <i data-lucide="phone" class="w-4 h-4"></i>
                         +1 (513) 775-5996
                     </a>
@@ -122,15 +122,15 @@
         </div>
 
         <!-- Mobile Dropdown Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
-            <a href="#about" class="block py-2 text-slate-300 hover:text-brand-amber cursor-pointer" onclick="toggleMobileMenu()">About Us</a>
-            <a href="#services" class="block py-2 text-slate-300 hover:text-brand-amber cursor-pointer" onclick="toggleMobileMenu()">Services</a>
-            <a href="#fleet" class="block py-2 text-slate-300 hover:text-brand-amber cursor-pointer" onclick="toggleMobileMenu()">Equipment</a>
-            <a href="#why-us" class="block py-2 text-slate-300 hover:text-brand-amber cursor-pointer" onclick="toggleMobileMenu()">Why Choose Us</a>
-            <a href="#terms" class="block py-2 text-slate-300 hover:text-brand-amber cursor-pointer" onclick="toggleMobileMenu()">Terms</a>
-            <a href="#privacy" class="block py-2 text-slate-300 hover:text-brand-amber cursor-pointer" onclick="toggleMobileMenu()">Privacy Policy</a>
-            <a href="#contact" class="block py-2 text-slate-300 hover:text-brand-amber cursor-pointer" onclick="toggleMobileMenu()">Contact</a>
-            <a href="tel:15137755996" class="inline-flex items-center gap-2 bg-brand-amber text-brand-dark px-4 py-2.5 rounded-lg font-bold w-full justify-center mt-2">
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-950 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-brand-cyan cursor-pointer" onclick="toggleMobileMenu()">About Us</a>
+            <a href="#services" class="block py-2 text-slate-300 hover:text-brand-cyan cursor-pointer" onclick="toggleMobileMenu()">Services</a>
+            <a href="#fleet" class="block py-2 text-slate-300 hover:text-brand-cyan cursor-pointer" onclick="toggleMobileMenu()">Equipment</a>
+            <a href="#why-us" class="block py-2 text-slate-300 hover:text-brand-cyan cursor-pointer" onclick="toggleMobileMenu()">Why Choose Us</a>
+            <a href="#terms" class="block py-2 text-slate-300 hover:text-brand-cyan cursor-pointer" onclick="toggleMobileMenu()">Terms</a>
+            <a href="#privacy" class="block py-2 text-slate-300 hover:text-brand-cyan cursor-pointer" onclick="toggleMobileMenu()">Privacy Policy</a>
+            <a href="#contact" class="block py-2 text-slate-300 hover:text-brand-cyan cursor-pointer" onclick="toggleMobileMenu()">Contact</a>
+            <a href="tel:15137755996" class="inline-flex items-center gap-2 bg-brand-cyan text-brand-dark px-4 py-2.5 rounded-lg font-bold w-full justify-center mt-2">
                 <i data-lucide="phone" class="w-4 h-4"></i>
                 +1 (513) 775-5996
             </a>
@@ -139,33 +139,33 @@
 
     <!-- Hero / About Us Section -->
     <section id="about" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden scroll-mt-20">
-        <!-- Hero Background Image -->
+        <!-- Hero Background Image (Updated to Cinematic Highway Rig) -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=2000&q=80" alt="Semi truck on highway" class="w-full h-full object-cover object-center">
+            <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2000&q=80" alt="Fleet of semi trucks" class="w-full h-full object-cover object-center">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-amber/10 border border-brand-amber/30 text-brand-amber text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
-                        <span class="w-2 h-2 rounded-full bg-brand-amber animate-pulse"></span>
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
+                        <span class="w-2 h-2 rounded-full bg-brand-cyan animate-pulse"></span>
                         Worldwide Freight Dispatch Solutions
                     </div>
                     <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-none uppercase font-heading">
-                        Keep Your Wheels Turning, <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-amber to-amber-200">Max Your Profitability.</span>
+                        Keep Your Wheels Turning, <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-sky-200">Max Your Profitability.</span>
                     </h1>
                     <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
                         Champion Logistics Worldwide delivers elite dispatch solutions for owner-operators and fleet owners across the nation. We manage rate negotiations, broker communications, carrier packets, and route scheduling—giving you maximum road freedom.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                        <a href="#contact" class="bg-brand-amber hover:bg-brand-amberDark text-brand-dark px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 transition-all hover:scale-105 shadow-xl shadow-brand-amber/25 cursor-pointer">
+                        <a href="#contact" class="bg-brand-cyan hover:bg-brand-cyanDark text-brand-dark px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 transition-all hover:scale-105 shadow-xl shadow-brand-cyan/25 cursor-pointer">
                             Get Dispatched Now
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
                         <a href="tel:15137755996" class="glass-panel hover:bg-slate-800/80 text-white border border-slate-700 px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-3 transition-all cursor-pointer">
-                            <i data-lucide="phone-call" class="w-5 h-5 text-brand-amber"></i>
+                            <i data-lucide="phone-call" class="w-5 h-5 text-brand-cyan"></i>
                             Call Dispatch
                         </a>
                     </div>
@@ -187,15 +187,15 @@
                     </div>
                 </div>
 
-                <!-- Photorealistic Truck Visual Card -->
+                <!-- Photorealistic Truck Visual Card (Updated Image) -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative mx-auto max-w-md lg:max-w-none">
                         <!-- Ambient backglow -->
-                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-amber to-amber-600 rounded-3xl blur-2xl opacity-20 animate-pulse-slow"></div>
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-cyan to-blue-600 rounded-3xl blur-2xl opacity-20 animate-pulse-slow"></div>
                         
-                        <div class="relative glass-panel bg-slate-900/90 rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl">
+                        <div class="relative glass-panel bg-slate-950/90 rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl">
                             <div class="img-zoom-container h-64 relative">
-                                <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=1000&q=80" alt="Modern Commercial Semi Truck" class="w-full h-full object-cover">
+                                <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1000&q=80" alt="Modern Commercial Semi Truck On Road" class="w-full h-full object-cover">
                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                                 <div class="absolute top-4 right-4 bg-emerald-500/20 backdrop-blur-md text-emerald-400 text-xs font-bold px-3 py-1.5 rounded-full border border-emerald-500/30 flex items-center gap-2">
                                     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
@@ -206,7 +206,7 @@
                             <div class="p-6 sm:p-8 space-y-4">
                                 <div class="flex items-center justify-between pb-3 border-b border-slate-800">
                                     <div class="flex items-center gap-3">
-                                        <div class="p-2.5 bg-brand-amber/10 rounded-xl text-brand-amber">
+                                        <div class="p-2.5 bg-brand-cyan/10 rounded-xl text-brand-cyan">
                                             <i data-lucide="shield-check" class="w-6 h-6"></i>
                                         </div>
                                         <div>
@@ -219,19 +219,19 @@
                                 <div class="space-y-3 pt-1">
                                     <div class="flex items-center justify-between text-sm">
                                         <span class="text-slate-400 flex items-center gap-2">
-                                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-amber"></i> Top Rate Negotiations
+                                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan"></i> Top Rate Negotiations
                                         </span>
                                         <span class="text-slate-200 font-semibold">Yes</span>
                                     </div>
                                     <div class="flex items-center justify-between text-sm">
                                         <span class="text-slate-400 flex items-center gap-2">
-                                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-amber"></i> Credit Checks
+                                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan"></i> Credit Checks
                                         </span>
                                         <span class="text-slate-200 font-semibold">Included</span>
                                     </div>
                                     <div class="flex items-center justify-between text-sm">
                                         <span class="text-slate-400 flex items-center gap-2">
-                                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-amber"></i> Carrier Packet Setup
+                                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-cyan"></i> Carrier Packet Setup
                                         </span>
                                         <span class="text-slate-200 font-semibold">Instant</span>
                                     </div>
@@ -239,7 +239,7 @@
 
                                 <div class="mt-6 pt-4 border-t border-slate-800 text-center">
                                     <span class="text-xs text-slate-400">Speak with a Senior Dispatcher Today:</span>
-                                    <div class="text-brand-amber font-extrabold text-xl font-heading mt-0.5 tracking-wider">+1 (513) 775-5996</div>
+                                    <div class="text-brand-cyan font-extrabold text-xl font-heading mt-0.5 tracking-wider">+1 (513) 775-5996</div>
                                 </div>
                             </div>
                         </div>
@@ -250,18 +250,18 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-24 bg-slate-900/80 border-y border-slate-800/80 relative scroll-mt-20">
+    <section id="services" class="py-24 bg-slate-950/80 border-y border-slate-800/80 relative scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-amber text-xs font-extrabold uppercase tracking-widest bg-brand-amber/10 px-3 py-1 rounded-full border border-brand-amber/20">Professional Services</span>
+                <span class="text-brand-cyan text-xs font-extrabold uppercase tracking-widest bg-brand-cyan/10 px-3 py-1 rounded-full border border-brand-cyan/20">Professional Services</span>
                 <h2 class="text-3xl sm:text-5xl font-bold text-white uppercase font-heading mt-4">Complete Dispatch Management</h2>
                 <p class="text-slate-400 mt-3 text-base">We handle every operational headache so you can focus on driving safely and growing your business.</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="glass-panel p-8 rounded-2xl hover:border-brand-amber/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
-                    <div class="p-3.5 bg-slate-800 text-brand-amber rounded-xl w-fit mb-6 group-hover:bg-brand-amber group-hover:text-brand-dark transition-colors shadow-inner">
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-cyan/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
+                    <div class="p-3.5 bg-slate-800 text-brand-cyan rounded-xl w-fit mb-6 group-hover:bg-brand-cyan group-hover:text-brand-dark transition-colors shadow-inner">
                         <i data-lucide="badge-dollar-sign" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Load Booking & Rate Negotiation</h3>
@@ -271,8 +271,8 @@
                 </div>
 
                 <!-- Service 2 -->
-                <div class="glass-panel p-8 rounded-2xl hover:border-brand-amber/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
-                    <div class="p-3.5 bg-slate-800 text-brand-amber rounded-xl w-fit mb-6 group-hover:bg-brand-amber group-hover:text-brand-dark transition-colors shadow-inner">
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-cyan/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
+                    <div class="p-3.5 bg-slate-800 text-brand-cyan rounded-xl w-fit mb-6 group-hover:bg-brand-cyan group-hover:text-brand-dark transition-colors shadow-inner">
                         <i data-lucide="file-check" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Paperwork & Invoicing</h3>
@@ -282,8 +282,8 @@
                 </div>
 
                 <!-- Service 3 -->
-                <div class="glass-panel p-8 rounded-2xl hover:border-brand-amber/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
-                    <div class="p-3.5 bg-slate-800 text-brand-amber rounded-xl w-fit mb-6 group-hover:bg-brand-amber group-hover:text-brand-dark transition-colors shadow-inner">
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-cyan/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
+                    <div class="p-3.5 bg-slate-800 text-brand-cyan rounded-xl w-fit mb-6 group-hover:bg-brand-cyan group-hover:text-brand-dark transition-colors shadow-inner">
                         <i data-lucide="headset" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">24/7 Dedicated Support</h3>
@@ -293,8 +293,8 @@
                 </div>
 
                 <!-- Service 4 -->
-                <div class="glass-panel p-8 rounded-2xl hover:border-brand-amber/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
-                    <div class="p-3.5 bg-slate-800 text-brand-amber rounded-xl w-fit mb-6 group-hover:bg-brand-amber group-hover:text-brand-dark transition-colors shadow-inner">
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-cyan/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
+                    <div class="p-3.5 bg-slate-800 text-brand-cyan rounded-xl w-fit mb-6 group-hover:bg-brand-cyan group-hover:text-brand-dark transition-colors shadow-inner">
                         <i data-lucide="map" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Route Optimization & Lane Planning</h3>
@@ -304,8 +304,8 @@
                 </div>
 
                 <!-- Service 5 -->
-                <div class="glass-panel p-8 rounded-2xl hover:border-brand-amber/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
-                    <div class="p-3.5 bg-slate-800 text-brand-amber rounded-xl w-fit mb-6 group-hover:bg-brand-amber group-hover:text-brand-dark transition-colors shadow-inner">
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-cyan/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
+                    <div class="p-3.5 bg-slate-800 text-brand-cyan rounded-xl w-fit mb-6 group-hover:bg-brand-cyan group-hover:text-brand-dark transition-colors shadow-inner">
                         <i data-lucide="shield-alert" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Broker Credit & Verification</h3>
@@ -315,8 +315,8 @@
                 </div>
 
                 <!-- Service 6 -->
-                <div class="glass-panel p-8 rounded-2xl hover:border-brand-amber/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
-                    <div class="p-3.5 bg-slate-800 text-brand-amber rounded-xl w-fit mb-6 group-hover:bg-brand-amber group-hover:text-brand-dark transition-colors shadow-inner">
+                <div class="glass-panel p-8 rounded-2xl hover:border-brand-cyan/50 transition-all hover:-translate-y-1 group relative overflow-hidden">
+                    <div class="p-3.5 bg-slate-800 text-brand-cyan rounded-xl w-fit mb-6 group-hover:bg-brand-cyan group-hover:text-brand-dark transition-colors shadow-inner">
                         <i data-lucide="message-square-text" class="w-7 h-7"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">SMS Dispatch Notifications</h3>
@@ -328,11 +328,11 @@
         </div>
     </section>
 
-    <!-- Equipment Showcase Section -->
+    <!-- Equipment Showcase Section (Updated Fresh Unsplash Logistics Images) -->
     <section id="fleet" class="py-24 bg-brand-dark scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-amber text-xs font-extrabold uppercase tracking-widest bg-brand-amber/10 px-3 py-1 rounded-full border border-brand-amber/20">Equipment Supported</span>
+                <span class="text-brand-cyan text-xs font-extrabold uppercase tracking-widest bg-brand-cyan/10 px-3 py-1 rounded-full border border-brand-cyan/20">Equipment Supported</span>
                 <h2 class="text-3xl sm:text-5xl font-bold text-white uppercase font-heading mt-4">We Dispatch All Major Trailer Types</h2>
                 <p class="text-slate-400 mt-3 text-base">Whether you operate a single rig or a growing fleet, our dispatchers have deep expertise across all major haul types.</p>
             </div>
@@ -341,9 +341,9 @@
                 <!-- Equipment 1 -->
                 <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 img-zoom-container group">
                     <div class="h-48 relative">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Dry Van Trailer" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=800&q=80" alt="Dry Van Semi Truck" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-amber text-brand-dark px-2.5 py-1 rounded uppercase">Dry Van</span>
+                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-cyan text-brand-dark px-2.5 py-1 rounded uppercase">Dry Van</span>
                     </div>
                     <div class="p-6">
                         <h4 class="text-lg font-bold text-white mb-2">53' Dry Vans</h4>
@@ -354,9 +354,9 @@
                 <!-- Equipment 2 -->
                 <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 img-zoom-container group">
                     <div class="h-48 relative">
-                        <img src="https://images.unsplash.com/photo-1591768793355-74d04bb6608f?auto=format&fit=crop&w=800&q=80" alt="Reefer Truck" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" alt="Reefer Logistics Warehouse Truck" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-amber text-brand-dark px-2.5 py-1 rounded uppercase">Reefer</span>
+                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-cyan text-brand-dark px-2.5 py-1 rounded uppercase">Reefer</span>
                     </div>
                     <div class="p-6">
                         <h4 class="text-lg font-bold text-white mb-2">Refrigerated Units</h4>
@@ -367,9 +367,9 @@
                 <!-- Equipment 3 -->
                 <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 img-zoom-container group">
                     <div class="h-48 relative">
-                        <img src="https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?auto=format&fit=crop&w=800&q=80" alt="Flatbed Heavy Haul" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?auto=format&fit=crop&w=800&q=80" alt="Flatbed Construction Equipment Hauler" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-amber text-brand-dark px-2.5 py-1 rounded uppercase">Flatbed</span>
+                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-cyan text-brand-dark px-2.5 py-1 rounded uppercase">Flatbed</span>
                     </div>
                     <div class="p-6">
                         <h4 class="text-lg font-bold text-white mb-2">Flatbed & Stepdeck</h4>
@@ -380,9 +380,9 @@
                 <!-- Equipment 4 -->
                 <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 img-zoom-container group">
                     <div class="h-48 relative">
-                        <img src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?auto=format&fit=crop&w=800&q=80" alt="Box Truck Fleet" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1616432043562-3671ea2e5242?auto=format&fit=crop&w=800&q=80" alt="Box Truck Distribution Fleet" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-amber text-brand-dark px-2.5 py-1 rounded uppercase">Box Truck</span>
+                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-cyan text-brand-dark px-2.5 py-1 rounded uppercase">Box Truck</span>
                     </div>
                     <div class="p-6">
                         <h4 class="text-lg font-bold text-white mb-2">Straight Box Trucks (26')</h4>
@@ -393,9 +393,9 @@
                 <!-- Equipment 5 -->
                 <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 img-zoom-container group">
                     <div class="h-48 relative">
-                        <img src="https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&w=800&q=80" alt="Hotshot Rig" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1565891741441-64926e441838?auto=format&fit=crop&w=800&q=80" alt="Hotshot Rig Freight Delivery" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-amber text-brand-dark px-2.5 py-1 rounded uppercase">Hotshot</span>
+                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-cyan text-brand-dark px-2.5 py-1 rounded uppercase">Hotshot</span>
                     </div>
                     <div class="p-6">
                         <h4 class="text-lg font-bold text-white mb-2">Hotshot Hauling</h4>
@@ -406,9 +406,9 @@
                 <!-- Equipment 6 -->
                 <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 img-zoom-container group">
                     <div class="h-48 relative">
-                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Power Only Semi" class="w-full h-full object-cover">
+                        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80" alt="Power Only Semi Tractor" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
-                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-amber text-brand-dark px-2.5 py-1 rounded uppercase">Power Only</span>
+                        <span class="absolute bottom-3 left-4 text-xs font-bold bg-brand-cyan text-brand-dark px-2.5 py-1 rounded uppercase">Power Only</span>
                     </div>
                     <div class="p-6">
                         <h4 class="text-lg font-bold text-white mb-2">Power Only Units</h4>
@@ -420,11 +420,11 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section id="why-us" class="py-24 bg-slate-900/60 border-t border-slate-800 relative scroll-mt-20">
+    <section id="why-us" class="py-24 bg-slate-950/60 border-t border-slate-800 relative scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="space-y-6">
-                    <span class="text-brand-amber text-xs font-extrabold uppercase tracking-widest bg-brand-amber/10 px-3 py-1 rounded-full border border-brand-amber/20">The Champion Advantage</span>
+                    <span class="text-brand-cyan text-xs font-extrabold uppercase tracking-widest bg-brand-cyan/10 px-3 py-1 rounded-full border border-brand-cyan/20">The Champion Advantage</span>
                     <h2 class="text-3xl sm:text-5xl font-bold text-white uppercase font-heading">Driven By Drivers, Built For Success</h2>
                     <p class="text-slate-400 leading-relaxed text-base">
                         Unlike conventional dispatch agencies that treat carriers as mere numbers, Champion Logistics Worldwide functions as your true back-office logistics partner. We protect your margin and prioritize driver safety.
@@ -432,7 +432,7 @@
 
                     <div class="space-y-4 pt-2">
                         <div class="flex items-start gap-4 p-4 glass-panel rounded-xl border border-slate-800">
-                            <div class="p-2.5 bg-brand-amber/20 text-brand-amber rounded-lg mt-0.5">
+                            <div class="p-2.5 bg-brand-cyan/20 text-brand-cyan rounded-lg mt-0.5">
                                 <i data-lucide="check-square" class="w-5 h-5"></i>
                             </div>
                             <div>
@@ -442,7 +442,7 @@
                         </div>
 
                         <div class="flex items-start gap-4 p-4 glass-panel rounded-xl border border-slate-800">
-                            <div class="p-2.5 bg-brand-amber/20 text-brand-amber rounded-lg mt-0.5">
+                            <div class="p-2.5 bg-brand-cyan/20 text-brand-cyan rounded-lg mt-0.5">
                                 <i data-lucide="percent" class="w-5 h-5"></i>
                             </div>
                             <div>
@@ -452,7 +452,7 @@
                         </div>
 
                         <div class="flex items-start gap-4 p-4 glass-panel rounded-xl border border-slate-800">
-                            <div class="p-2.5 bg-brand-amber/20 text-brand-amber rounded-lg mt-0.5">
+                            <div class="p-2.5 bg-brand-cyan/20 text-brand-cyan rounded-lg mt-0.5">
                                 <i data-lucide="users" class="w-5 h-5"></i>
                             </div>
                             <div>
@@ -471,23 +471,23 @@
                     <form onsubmit="event.preventDefault(); alert('Thank you! A Champion Logistics dispatch manager will contact you shortly.');" class="space-y-4">
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">Company / Carrier Name</label>
-                            <input type="text" required placeholder="e.g. Apex Freight LLC" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-amber text-sm transition-colors">
+                            <input type="text" required placeholder="e.g. Apex Freight LLC" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-cyan text-sm transition-colors">
                         </div>
 
                         <div class="grid grid-cols-2 gap-4">
                             <div>
                                 <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">MC / USDOT #</label>
-                                <input type="text" required placeholder="MC-123456" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-amber text-sm transition-colors">
+                                <input type="text" required placeholder="MC-123456" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-cyan text-sm transition-colors">
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">Phone Number</label>
-                                <input type="tel" required placeholder="(513) 775-5996" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-amber text-sm transition-colors">
+                                <input type="tel" required placeholder="(513) 775-5996" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-brand-cyan text-sm transition-colors">
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">Primary Equipment</label>
-                            <select required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-brand-amber text-sm transition-colors">
+                            <select required class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-slate-100 focus:outline-none focus:border-brand-cyan text-sm transition-colors">
                                 <option value="">Select Equipment Type</option>
                                 <option value="dryvan">53' Dry Van</option>
                                 <option value="reefer">Refrigerated (Reefer)</option>
@@ -498,7 +498,7 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="w-full bg-brand-amber hover:bg-brand-amberDark text-brand-dark py-4 rounded-xl font-bold text-base transition-all hover:scale-[1.02] shadow-lg shadow-brand-amber/20 mt-4 cursor-pointer flex items-center justify-center gap-2">
+                        <button type="submit" class="w-full bg-brand-cyan hover:bg-brand-cyanDark text-brand-dark py-4 rounded-xl font-bold text-base transition-all hover:scale-[1.02] shadow-lg shadow-brand-cyan/20 mt-4 cursor-pointer flex items-center justify-center gap-2">
                             <span>Submit Setup Request</span>
                             <i data-lucide="send" class="w-4 h-4"></i>
                         </button>
@@ -512,7 +512,7 @@
     <section id="terms" class="py-20 bg-brand-dark border-t border-slate-800 scroll-mt-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <span class="text-brand-amber text-xs font-extrabold uppercase tracking-widest bg-brand-amber/10 px-3 py-1 rounded-full border border-brand-amber/20">Legal Framework</span>
+                <span class="text-brand-cyan text-xs font-extrabold uppercase tracking-widest bg-brand-cyan/10 px-3 py-1 rounded-full border border-brand-cyan/20">Legal Framework</span>
                 <h2 class="text-3xl font-bold text-white uppercase font-heading mt-3">Terms of Service</h2>
             </div>
             <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-slate-800 text-slate-300 text-sm space-y-4 leading-relaxed">
@@ -524,10 +524,10 @@
     </section>
 
     <!-- Privacy Section -->
-    <section id="privacy" class="py-20 bg-slate-900/40 border-t border-slate-800 scroll-mt-20">
+    <section id="privacy" class="py-20 bg-slate-950/40 border-t border-slate-800 scroll-mt-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <span class="text-brand-amber text-xs font-extrabold uppercase tracking-widest bg-brand-amber/10 px-3 py-1 rounded-full border border-brand-amber/20">Data Protection</span>
+                <span class="text-brand-cyan text-xs font-extrabold uppercase tracking-widest bg-brand-cyan/10 px-3 py-1 rounded-full border border-brand-cyan/20">Data Protection</span>
                 <h2 class="text-3xl font-bold text-white uppercase font-heading mt-3">Privacy Policy</h2>
             </div>
             <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-slate-800 text-slate-300 text-sm space-y-4 leading-relaxed">
@@ -541,25 +541,25 @@
     <section id="contact" class="py-24 bg-brand-dark border-t border-slate-800 scroll-mt-20 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-brand-amber text-xs font-extrabold uppercase tracking-widest bg-brand-amber/10 px-3 py-1 rounded-full border border-brand-amber/20">Get In Touch</span>
+                <span class="text-brand-cyan text-xs font-extrabold uppercase tracking-widest bg-brand-cyan/10 px-3 py-1 rounded-full border border-brand-cyan/20">Get In Touch</span>
                 <h2 class="text-3xl sm:text-5xl font-bold text-white uppercase font-heading mt-4">Contact Champion Logistics</h2>
                 <p class="text-slate-400 mt-3 text-base">Our dispatch desk is open around the clock to support your fleet.</p>
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Phone -->
-                <a href="tel:15137755996" class="glass-panel p-8 rounded-2xl text-center hover:border-brand-amber/50 transition-all group">
-                    <div class="p-4 bg-brand-amber/10 text-brand-amber rounded-2xl w-fit mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <a href="tel:15137755996" class="glass-panel p-8 rounded-2xl text-center hover:border-brand-cyan/50 transition-all group">
+                    <div class="p-4 bg-brand-cyan/10 text-brand-cyan rounded-2xl w-fit mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i data-lucide="phone-call" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-1">Phone Line</h3>
-                    <p class="text-brand-amber font-heading text-xl font-bold tracking-wider">+1 (513) 775-5996</p>
+                    <p class="text-brand-cyan font-heading text-xl font-bold tracking-wider">+1 (513) 775-5996</p>
                     <p class="text-xs text-slate-400 mt-2">24/7 Live Support Desk</p>
                 </a>
 
                 <!-- Location -->
                 <div class="glass-panel p-8 rounded-2xl text-center border border-slate-800">
-                    <div class="p-4 bg-brand-amber/10 text-brand-amber rounded-2xl w-fit mx-auto mb-4">
+                    <div class="p-4 bg-brand-cyan/10 text-brand-cyan rounded-2xl w-fit mx-auto mb-4">
                         <i data-lucide="map-pin" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-1">Headquarters</h3>
@@ -570,7 +570,7 @@
 
                 <!-- Hours -->
                 <div class="glass-panel p-8 rounded-2xl text-center border border-slate-800">
-                    <div class="p-4 bg-brand-amber/10 text-brand-amber rounded-2xl w-fit mx-auto mb-4">
+                    <div class="p-4 bg-brand-cyan/10 text-brand-cyan rounded-2xl w-fit mx-auto mb-4">
                         <i data-lucide="clock" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-lg font-bold text-white mb-1">Operating Hours</h3>
@@ -586,23 +586,23 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-slate-800 pb-8">
                 <a href="#" onclick="window.location.reload(); return false;" class="flex items-center gap-3">
-                    <div class="bg-brand-amber text-brand-dark p-2 rounded-lg">
+                    <div class="bg-brand-cyan text-brand-dark p-2 rounded-lg">
                         <i data-lucide="truck" class="w-6 h-6 text-brand-dark"></i>
                     </div>
                     <div class="flex flex-col">
                         <span class="font-heading text-xl font-bold tracking-wider text-white">CHAMPION</span>
-                        <span class="text-[9px] tracking-widest text-brand-amber font-semibold uppercase -mt-1">Logistics Worldwide</span>
+                        <span class="text-[9px] tracking-widest text-brand-cyan font-semibold uppercase -mt-1">Logistics Worldwide</span>
                     </div>
                 </a>
 
                 <div class="flex flex-wrap justify-center gap-6 text-xs text-slate-400 font-medium">
-                    <a href="#about" class="hover:text-brand-amber transition-colors">About Us</a>
-                    <a href="#services" class="hover:text-brand-amber transition-colors">Services</a>
-                    <a href="#fleet" class="hover:text-brand-amber transition-colors">Equipment</a>
-                    <a href="#why-us" class="hover:text-brand-amber transition-colors">Why Us</a>
-                    <a href="#terms" class="hover:text-brand-amber transition-colors">Terms</a>
-                    <a href="#privacy" class="hover:text-brand-amber transition-colors">Privacy</a>
-                    <a href="#contact" class="hover:text-brand-amber transition-colors">Contact</a>
+                    <a href="#about" class="hover:text-brand-cyan transition-colors">About Us</a>
+                    <a href="#services" class="hover:text-brand-cyan transition-colors">Services</a>
+                    <a href="#fleet" class="hover:text-brand-cyan transition-colors">Equipment</a>
+                    <a href="#why-us" class="hover:text-brand-cyan transition-colors">Why Us</a>
+                    <a href="#terms" class="hover:text-brand-cyan transition-colors">Terms</a>
+                    <a href="#privacy" class="hover:text-brand-cyan transition-colors">Privacy</a>
+                    <a href="#contact" class="hover:text-brand-cyan transition-colors">Contact</a>
                 </div>
             </div>
 
