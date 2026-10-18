@@ -139,7 +139,7 @@
 
     <!-- Hero / About Us Section -->
     <section id="about" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden scroll-mt-20">
-        <!-- Hero Background Image (Updated to Cinematic Highway Rig) -->
+        <!-- Hero Background Image -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=2000&q=80" alt="Fleet of semi trucks" class="w-full h-full object-cover object-center">
             <div class="absolute inset-0 hero-overlay"></div>
@@ -187,7 +187,7 @@
                     </div>
                 </div>
 
-                <!-- Photorealistic Truck Visual Card (Updated Image) -->
+                <!-- Photorealistic Truck Visual Card -->
                 <div class="lg:col-span-5 relative">
                     <div class="relative mx-auto max-w-md lg:max-w-none">
                         <!-- Ambient backglow -->
@@ -328,7 +328,7 @@
         </div>
     </section>
 
-    <!-- Equipment Showcase Section (Updated Fresh Unsplash Logistics Images) -->
+    <!-- Equipment Showcase Section -->
     <section id="fleet" class="py-24 bg-brand-dark scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -463,7 +463,7 @@
                     </div>
                 </div>
 
-                <!-- Right Side Interactive Form Card -->
+                <!-- Right Side Interactive Form Card with SMS Opt-In Checkbox -->
                 <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-slate-700/80 shadow-2xl relative">
                     <h3 class="text-2xl font-bold text-white font-heading uppercase mb-2">Carrier Onboarding Setup</h3>
                     <p class="text-slate-400 text-xs mb-6">Fill out your truck details to partner with Champion Logistics Worldwide.</p>
@@ -498,6 +498,14 @@
                             </select>
                         </div>
 
+                        <!-- SMS Opt-In Checkbox for Compliance -->
+                        <div class="flex items-start gap-3 pt-2">
+                            <input type="checkbox" id="sms-consent" class="mt-1 accent-brand-cyan h-4 w-4 rounded border-slate-700 bg-slate-900">
+                            <label for="sms-consent" class="text-xs text-slate-400 leading-relaxed">
+                                I consent to receive SMS notifications, load updates, and dispatch communications from Champion Logistics Worldwide. Message frequency varies (approx. 5–20 msgs/wk). Message and data rates may apply. Reply STOP to opt out at any time or HELP for assistance.
+                            </label>
+                        </div>
+
                         <button type="submit" class="w-full bg-brand-cyan hover:bg-brand-cyanDark text-brand-dark py-4 rounded-xl font-bold text-base transition-all hover:scale-[1.02] shadow-lg shadow-brand-cyan/20 mt-4 cursor-pointer flex items-center justify-center gap-2">
                             <span>Submit Setup Request</span>
                             <i data-lucide="send" class="w-4 h-4"></i>
@@ -508,31 +516,106 @@
         </div>
     </section>
 
-    <!-- Terms Section -->
+    <!-- Terms and Conditions Section -->
     <section id="terms" class="py-20 bg-brand-dark border-t border-slate-800 scroll-mt-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-brand-cyan text-xs font-extrabold uppercase tracking-widest bg-brand-cyan/10 px-3 py-1 rounded-full border border-brand-cyan/20">Legal Framework</span>
-                <h2 class="text-3xl font-bold text-white uppercase font-heading mt-3">Terms of Service</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white uppercase font-heading mt-3">Terms and Conditions</h2>
+                <p class="text-slate-400 text-xs mt-1 uppercase tracking-wider">Official SMS Communication & Service Guidelines for Champion Logistics Worldwide</p>
             </div>
-            <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-slate-800 text-slate-300 text-sm space-y-4 leading-relaxed">
-                <p><strong class="text-white">1. Service Agreement:</strong> Champion Logistics Worldwide acts as an independent dispatch agent on behalf of licensed motor carriers. By signing our dispatch agreement, carriers authorize us to negotiate rates and handle logistics documentation.</p>
-                <p><strong class="text-white">2. No Forced Dispatch:</strong> The carrier retains ultimate decision-making power over every load offered. We will never obligate a driver to take a load they reject.</p>
-                <p><strong class="text-white">3. Payments & Brokerage:</strong> Brokers pay carriers directly. Champion Logistics Worldwide invoices carrier service fees according to agreed terms following successful rate confirmation issuance.</p>
+            
+            <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-slate-800 text-slate-300 text-sm space-y-6 leading-relaxed">
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">1. SMS Consent Communication</h3>
+                    <p>The information (phone numbers) obtained as part of the SMS consent process will not be shared with third parties or affiliates for marketing purposes.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">2. Types of SMS Communications</h3>
+                    <p>If you have consented to receive text messages from Champion Logistics Worldwide, you may receive messages related to delivery notifications, load status updates, and dispatch coordination.</p>
+                    <div class="mt-2 p-3 bg-slate-900/90 rounded-lg border border-slate-800 text-xs italic text-slate-400">
+                        <strong class="text-brand-cyan not-italic">Example Message:</strong> "Hi, this is dispatch from Champion Logistics Worldwide. Your delivery appointment is scheduled for today at 2 PM at 1450 Industrial Rd, Orlando, FL. Please confirm. Reply STOP to opt out of SMS messaging at any time."
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">3. Message Frequency</h3>
+                    <p>Message frequency may vary depending on the type of communication. For example, you may receive approximately 5–20 SMS messages per week related to delivery updates, scheduling, and dispatch coordination.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">4. Potential Fees for SMS Messaging</h3>
+                    <p>Please note that standard message and data rates may apply, depending on your carrier’s pricing plan. These fees may vary if the message is sent domestically or internationally.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">5. Opt-In Method</h3>
+                    <p class="mb-2">You may opt in to receive SMS messages from Champion Logistics Worldwide in the following ways:</p>
+                    <ul class="list-disc list-inside space-y-1 text-slate-400 text-xs pl-2">
+                        <li>By checking a box through our website form.</li>
+                        <li>By explicitly requesting communications via email or phone.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">6. Opt-Out Method</h3>
+                    <p>You can opt out of receiving SMS messages at any time. To do so, simply reply "STOP" to any SMS message you receive. Alternatively, you can contact us directly to request removal from our messaging list.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">7. Help & Support</h3>
+                    <p>If you are experiencing any issues, you can reply with the keyword <strong>HELP</strong>. Or, you can get help directly from us at <strong>+1 (513) 775-5996</strong>.</p>
+                    <p class="text-xs text-slate-400 mt-1"><em>Additional Options:</em> If you do not wish to receive SMS messages, you can choose not to check the SMS consent box on our forms.</p>
+                </div>
+
+                <div class="pt-2 border-t border-slate-800">
+                    <h3 class="text-white font-bold text-base mb-2">8. Standard Messaging Disclosures</h3>
+                    <ul class="list-disc list-inside space-y-1 text-slate-400 text-xs pl-2">
+                        <li>Message and data rates may apply.</li>
+                        <li>You can opt out at any time by texting "STOP."</li>
+                        <li>For assistance, text "HELP" or read our Privacy Policy.</li>
+                        <li>Message frequency may vary.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Privacy Section -->
+    <!-- Privacy Policy Section -->
     <section id="privacy" class="py-20 bg-slate-950/40 border-t border-slate-800 scroll-mt-20">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <span class="text-brand-cyan text-xs font-extrabold uppercase tracking-widest bg-brand-cyan/10 px-3 py-1 rounded-full border border-brand-cyan/20">Data Protection</span>
-                <h2 class="text-3xl font-bold text-white uppercase font-heading mt-3">Privacy Policy</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white uppercase font-heading mt-3">Privacy Policy</h2>
+                <p class="text-slate-400 text-xs mt-1 uppercase tracking-wider">How Champion Logistics Worldwide collects, uses, and protects your information.</p>
             </div>
-            <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-slate-800 text-slate-300 text-sm space-y-4 leading-relaxed">
-                <p><strong class="text-white">1. Information Collection:</strong> We collect business contact details, MC/USDOT numbers, insurance certificates, and equipment info exclusively for carrier onboarding and dispatch fulfillment.</p>
-                <p><strong class="text-white">2. Data Security:</strong> Champion Logistics Worldwide never sells or trades carrier data to third-party marketers. Information is strictly shared with verified brokers for rate setups.</p>
+
+            <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-slate-800 text-slate-300 text-sm space-y-6 leading-relaxed">
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">Information We Collect</h3>
+                    <p>When you engage with our dispatch services or complete our driver intake form, we collect personal information necessary to provide our services. This includes, but is not limited to, your name, phone number, email address, MC/DOT numbers, equipment types, and geographic routing preferences. We may also automatically collect standard technical data (like IP addresses and browser types) when you visit our website.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">How We Use Your Information</h3>
+                    <p>The information we collect is strictly used to facilitate truck dispatching operations on your behalf. This includes securing freight loads, negotiating rates, completing carrier setup packets, optimizing routing, and providing customer support. We also use your contact details to communicate essential load updates and administrative notices.</p>
+                </div>
+
+                <div class="p-4 bg-brand-cyan/10 rounded-xl border border-brand-cyan/30">
+                    <h3 class="text-brand-cyan font-bold text-base mb-1">Strict SMS & Communication Privacy</h3>
+                    <p class="text-slate-200">We highly value your privacy, especially regarding mobile communications. The information and phone numbers obtained as part of our SMS opt-in and consent process will absolutely not be shared with, sold to, or rented to any third parties or affiliates for marketing purposes. SMS consent data is strictly isolated and used solely for operational dispatch communications between you and Champion Logistics Worldwide.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">Information Sharing & Third Parties</h3>
+                    <p>We do not sell your personal data. We only share necessary business information (such as MC numbers, certificates of insurance, or contact information) with relevant freight brokers, shippers, or factoring companies exclusively for the purpose of booking loads and securing payment on your behalf. We may also disclose information if required by law or to protect our legal rights.</p>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold text-base mb-1">Data Security & Protection</h3>
+                    <p>We implement appropriate technical and administrative security measures to protect your personal and business information from unauthorized access, alteration, disclosure, or destruction. While no transmission over the Internet is 100% secure, we strive to use commercially acceptable means to protect your sensitive carrier data.</p>
+                </div>
             </div>
         </div>
     </section>
