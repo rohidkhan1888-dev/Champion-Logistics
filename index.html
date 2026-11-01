@@ -498,14 +498,37 @@
                             </select>
                         </div>
 
-                        <!-- SMS Opt-In Checkbox for Compliance -->
-                        <div class="flex items-start gap-3 pt-2">
-                            <input type="checkbox" id="sms-consent" name="smsConsent" value="yes" class="mt-1 accent-brand-cyan h-4 w-4 rounded border-slate-700 bg-slate-900">
-                            <label for="sms-consent" class="text-xs text-slate-400 leading-relaxed">
-                                I consent to receive SMS notifications, load updates, and dispatch communications from Champion Logistics Worldwide. Message frequency varies (approx. 5–20 msgs/wk). Message and data rates may apply. Reply STOP to opt out at any time or HELP for assistance.
-                            </label>
-                        </div>
+        
+<!-- SMS Opt-In Checkbox for Compliance -->
+<div class="flex items-start gap-3 pt-2">
+    <input
+        type="checkbox"
+        id="sms-consent"
+        name="smsConsent"
+        value="yes"
+        class="mt-1 accent-brand-cyan h-4 w-4 rounded border-slate-700 bg-slate-900"
+    >
 
+    <label for="sms-consent" class="text-xs text-slate-400 leading-relaxed">
+        I consent to receive conversations (external) text messages from
+        CHAMPION LOGISTICS WORLDWIDE INC. Reply STOP to opt-out; Reply HELP
+        for support; Message and data rates apply; Messaging frequency may vary.
+        Visit
+        <a
+            href="https://championlogisticsworldwideinc.online/#privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-brand-cyan underline hover:opacity-80"
+        >Privacy Policy</a>
+        and
+        <a
+            href="https://championlogisticsworldwideinc.online/#terms"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-brand-cyan underline hover:opacity-80"
+        >Terms of Service</a>.
+    </label>
+</div>
                         <button type="submit" class="w-full bg-brand-cyan hover:bg-brand-cyanDark text-brand-dark py-4 rounded-xl font-bold text-base transition-all hover:scale-[1.02] shadow-lg shadow-brand-cyan/20 mt-4 cursor-pointer flex items-center justify-center gap-2">
                             <span>Submit Setup Request</span>
                             <i data-lucide="send" class="w-4 h-4"></i>
